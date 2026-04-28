@@ -4,15 +4,14 @@ title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+## About This Project
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
+This site presents the **COMP110 EX09: Data Analysis for Continuous Improvement** project, completed as part of COMP110 — Introduction to Programming in Python at UNC Chapel Hill.
 
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
+The analysis examines student survey data to determine whether optional pre-lecture videos would improve the course experience, with a focus on students who report higher difficulty or lower self-assessed understanding.
 
+## About Me
 
-[jekyll-organization]: https://github.com/jekyll
+I'm Vedat Cakmaktepe, a student at UNC Chapel Hill. This site was built with [Jekyll](https://jekyllrb.com) and hosted on GitHub Pages.
+
+You can find my work on GitHub: [vcakmaktepe](https://github.com/vcakmaktepe)
