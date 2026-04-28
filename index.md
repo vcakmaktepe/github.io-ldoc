@@ -4,107 +4,129 @@ layout: default
 
 <style>
   body {
-    background: #f6f8fb;
-    color: #172033;
+    background: #f7f5ef;
+    color: #1f2933;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
     line-height: 1.65;
   }
 
   .page-wrap {
-    max-width: 980px;
+    max-width: 1040px;
     margin: 0 auto;
-    padding: 2rem 1.25rem 4rem;
+    padding: 2rem 1rem 4rem;
   }
 
-  .hero {
-    background: linear-gradient(135deg, #13294b, #4b9cd3);
-    color: white;
-    border-radius: 20px;
-    padding: 2.5rem;
-    margin-bottom: 2rem;
-    box-shadow: 0 18px 40px rgba(19, 41, 75, 0.22);
+  .project-header {
+    padding: 1.5rem 0 2rem;
+    border-bottom: 4px solid #2b6f73;
   }
 
-  .hero h1 {
-    margin-top: 0;
-    margin-bottom: 0.75rem;
-    font-size: 2.4rem;
-    line-height: 1.15;
+  .project-header h1 {
+    color: #13294b;
+    font-size: clamp(2rem, 4vw, 3.1rem);
+    line-height: 1.12;
+    margin: 0 0 0.8rem;
   }
 
-  .hero p {
-    margin-bottom: 0;
+  .project-header p {
+    color: #334155;
     font-size: 1.08rem;
     max-width: 780px;
+    margin: 0;
   }
 
-  .card {
-    background: white;
-    border-radius: 18px;
-    padding: 1.6rem 1.8rem;
-    margin: 1.4rem 0;
-    box-shadow: 0 10px 28px rgba(15, 23, 42, 0.08);
-    border: 1px solid #e6edf5;
+  .kicker {
+    color: #8a3b2f;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    margin-bottom: 0.55rem;
+    text-transform: uppercase;
   }
 
-  .card h2 {
-    margin-top: 0;
+  .section {
+    padding: 2rem 0;
+    border-bottom: 1px solid #d8d2c3;
+  }
+
+  .section h2 {
     color: #13294b;
-    border-bottom: 2px solid #e7f1fb;
-    padding-bottom: 0.45rem;
+    font-size: 1.5rem;
+    line-height: 1.25;
+    margin: 0 0 0.8rem;
   }
 
-  .pill-row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.55rem;
-    margin-top: 1rem;
+  .section p {
+    max-width: 860px;
   }
 
-  .pill {
-    background: #e7f1fb;
-    color: #13294b;
-    border-radius: 999px;
-    padding: 0.35rem 0.8rem;
-    font-size: 0.92rem;
-    font-weight: 600;
+  .idea-list {
+    padding-left: 1.35rem;
+    max-width: 900px;
   }
 
   .idea-list li {
     margin-bottom: 0.9rem;
   }
 
-  .figure-card {
-    background: #ffffff;
-    border: 1px solid #dbe7f3;
-    border-radius: 18px;
-    padding: 1rem;
-    margin: 1.5rem 0;
-    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.07);
+  .field-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
   }
 
-  .figure-card img {
-    width: 100%;
-    max-width: 900px;
+  .field-list code {
+    background: #e7eee8;
+    border: 1px solid #c8d8ce;
+    border-radius: 6px;
+    color: #23443d;
+    padding: 0.2rem 0.45rem;
+  }
+
+  .chart-grid {
+    display: grid;
+    gap: 1.4rem;
+    margin-top: 1.2rem;
+  }
+
+  .chart-panel {
+    background: #ffffff;
+    border: 1px solid #d8d2c3;
+    border-radius: 8px;
+    padding: 1rem;
+  }
+
+  .chart-panel h3 {
+    color: #13294b;
+    font-size: 1.1rem;
+    margin: 0 0 0.8rem;
+  }
+
+  .chart-panel img {
     display: block;
-    margin: 0 auto;
-    border-radius: 12px;
-    border: 1px solid #edf2f7;
+    width: 100%;
+    height: auto;
+    border: 1px solid #e5e1d8;
+    border-radius: 6px;
   }
 
   .caption {
-    color: #526176;
+    color: #52606d;
     font-size: 0.95rem;
-    margin-top: 0.8rem;
+    margin: 0.8rem 0 0;
   }
 
   .recommendation {
-    background: #eef7ff;
-    border-left: 6px solid #4b9cd3;
+    background: #e7eee8;
+    border-left: 5px solid #2b6f73;
+    border-radius: 8px;
+    padding: 1rem 1.15rem;
+    margin-top: 1rem;
   }
 
   code {
-    background: #f0f4f8;
+    background: #ece7dc;
     border-radius: 5px;
     padding: 0.1rem 0.28rem;
   }
@@ -112,89 +134,85 @@ layout: default
 
 <div class="page-wrap">
 
-<section class="hero">
-  <h1>COMP110 EX09: Data Analysis for Continuous Improvement</h1>
-  <p>This project analyzes whether optional pre-lecture videos could improve the COMP110 learning experience by helping students prepare before live lecture.</p>
-</section>
+  <header class="project-header">
+    <div class="kicker">COMP110 EX09</div>
+    <h1>Data Analysis for Course Improvement</h1>
+    <p>This project uses anonymized COMP110 survey data to evaluate whether optional pre-lecture videos would create value for students by helping them prepare before live class meetings.</p>
+  </header>
 
-<section class="card">
-  <h2>Project Focus</h2>
-  <p>This project analyzes whether COMP110 should add optional pre-lecture videos to help students prepare before class. The central idea is that preview videos could create value for students who need more time to process new programming concepts before encountering them in live lecture.</p>
+  <section class="section">
+    <h2>Project Focus</h2>
+    <p>The improvement idea I chose to analyze is a pilot set of optional pre-lecture videos for topics that students commonly find difficult. The stakeholder group most directly served is students enrolled in COMP110, because the videos would give them a low-pressure way to preview unfamiliar concepts before lecture.</p>
+    <p>The analysis looks for evidence that students want this resource, especially students who report higher course difficulty or lower self-reported understanding.</p>
+    <div class="field-list" aria-label="Survey fields used in the analysis">
+      <code>pre_lecture_videos</code>
+      <code>difficulty</code>
+      <code>understanding</code>
+      <code>prior_exp</code>
+      <code>ls_effective</code>
+      <code>unc_status</code>
+    </div>
+  </section>
 
-  <p>The analysis uses anonymized COMP110 survey data from both course sections.</p>
+  <section class="section">
+    <h2>Brainstormed Improvement Ideas</h2>
+    <ol class="idea-list">
+      <li><strong>Optional pre-lecture videos for difficult topics.</strong> This creates value for students by letting them preview new concepts at their own pace before class.</li>
+      <li><strong>More examples connected to non-CS fields.</strong> This creates value for students outside the CS major and for the societal workforce by making programming feel more relevant across disciplines.</li>
+      <li><strong>Expanded office-hour capacity before major deadlines.</strong> This creates value for students by reducing help-seeking bottlenecks and for instructional staff by distributing support more intentionally.</li>
+      <li><strong>Structured peer study-group matching.</strong> This creates value for students by adding another layer of academic support outside formal office hours.</li>
+      <li><strong>A mid-semester pacing and difficulty checkpoint.</strong> This creates value for instructional staff and the academic institution by giving the course team earlier feedback for targeted adjustments.</li>
+    </ol>
+  </section>
 
-  <div class="pill-row">
-    <span class="pill">pre_lecture_videos</span>
-    <span class="pill">difficulty</span>
-    <span class="pill">understanding</span>
-    <span class="pill">prior_exp</span>
-    <span class="pill">ls_effective</span>
-  </div>
-</section>
+  <section class="section">
+    <h2>Idea With Missing Data</h2>
+    <p>The idea least supported by the current survey is structured peer study-group matching. The survey does not directly ask whether students already study with peers, whether they want help finding study partners, or whether they would opt in to a matching system.</p>
+    <p>A future survey could collect this data by asking how often students currently work with classmates, whether they would use an opt-in matching tool, what format they prefer for study groups, and whether peer study improves their confidence or assignment progress.</p>
+  </section>
 
-<section class="card">
-  <h2>Brainstormed Course Improvement Ideas</h2>
-  <ol class="idea-list">
-    <li>The course should offer optional pre-lecture video content covering each lecture topic because it would allow students who need more preparation time to preview material at their own pace before class.</li>
-    <li>The course should integrate more domain-specific examples, such as biology, economics, psychology, and public health examples, into programming exercises because this would make the material feel more relevant to students outside the computer science major.</li>
-    <li>The course should expand the number of available office hours appointments during the 48-hour window before major assignments are due because this would reduce help-seeking bottlenecks.</li>
-    <li>The course should introduce a structured peer-tutoring or study-group matching system because it would give students another layer of support outside formal office hours.</li>
-    <li>The course should include a mid-semester difficulty and pacing checkpoint because this would give instructional staff real-time feedback and allow them to adjust course support before the end of the semester.</li>
-  </ol>
-</section>
+  <section class="section">
+    <h2>Chosen Analysis</h2>
+    <p>I chose to analyze optional pre-lecture videos because the survey contains a direct measure of student interest in that exact resource. The idea also has practical value: once a short video is produced, it can be reused by many students and future course sections.</p>
+    <p>For the notebook analysis, I loaded the survey with <code>read_csv_rows</code>, inspected it with <code>head</code>, reorganized it with <code>columnar</code>, selected the relevant fields with <code>select</code>, summarized response frequencies with <code>count</code>, and used a helper function to convert valid Likert-scale strings into numeric values for plotting.</p>
+  </section>
 
-<section class="card">
-  <h2>Idea With Missing Data</h2>
-  <p>The idea least supported by the current survey data is the structured peer-tutoring or study-group matching system. The survey does not directly ask whether students currently study with peers, whether they want peer-matching support, or whether they would participate in a structured study group.</p>
-  <p>To collect better data in the future, the course could add survey questions asking students how often they study with peers, whether they would use a formal study-group matching system, and whether peer collaboration improves their confidence.</p>
-</section>
+  <section class="section">
+    <h2>Analysis Summary</h2>
+    <p>The first chart summarizes overall interest in optional pre-lecture videos. The distribution leans toward agreement, with the highest response levels appearing more often than the lowest response levels. That suggests the idea has broad student demand.</p>
+    <p>The second and third charts compare interest in pre-lecture videos against students' reported difficulty and understanding. These relationships are not perfectly linear, but they show that interest remains high among students who report struggling with the course. That makes the feature especially relevant as an optional support resource rather than a required replacement for lecture.</p>
+  </section>
 
-<section class="card">
-  <h2>Chosen Analysis</h2>
-  <p>The idea selected for analysis is optional pre-lecture videos. This idea was chosen because the dataset directly includes the <code>pre_lecture_videos</code> column, which measures student interest in this feature on a 1-7 agreement scale.</p>
-  <p>This idea is valuable because pre-lecture videos are scalable. Once created, they can be reused across sections and semesters. Compared with expanding office hours, which requires ongoing staff time, pre-lecture videos have a larger potential reach with a lower recurring cost.</p>
-</section>
+  <section class="section">
+    <h2>Visualizations</h2>
+    <div class="chart-grid">
+      <article class="chart-panel">
+        <h3>Overall Interest in Pre-Lecture Videos</h3>
+        <img src="{{ '/static/imgs/pre_lecture_video_interest.png' | relative_url }}" alt="Count plot showing student ratings for interest in optional pre-lecture videos">
+        <p class="caption">This count plot shows how many students selected each rating for the <code>pre_lecture_videos</code> survey item. Ratings near 7 indicate stronger agreement that the videos would be helpful.</p>
+      </article>
 
-<section class="card">
-  <h2>Analysis Summary</h2>
-  <p>The analysis combined the <code>survey_izzi.csv</code> and <code>survey_alyssa.csv</code> datasets into one larger table. After combining the datasets, I selected the columns most relevant to the research question: <code>prior_exp</code>, <code>difficulty</code>, <code>understanding</code>, <code>pre_lecture_videos</code>, <code>ls_effective</code>, and <code>unc_status</code>.</p>
-  <p>Overall, the data suggests meaningful support for optional pre-lecture videos. Students who reported higher difficulty or lower understanding tended to show stronger interest in having pre-lecture videos available.</p>
-</section>
+      <article class="chart-panel">
+        <h3>Interest Compared With Course Difficulty</h3>
+        <img src="{{ '/static/imgs/difficulty_vs_prelecture.png' | relative_url }}" alt="Scatterplot comparing perceived course difficulty with interest in pre-lecture videos">
+        <p class="caption">This scatterplot compares perceived course difficulty with interest in pre-lecture videos. It helps evaluate whether students who find the course more difficult also tend to support the extra preparation resource.</p>
+      </article>
 
-<section class="card">
-  <h2>Visualization 1: Overall Interest in Pre-Lecture Videos</h2>
-  <div class="figure-card">
-    <img src="{{ site.baseurl }}/static/imgs/pre_lecture_video_interest.png" alt="Count plot showing student interest in optional pre-lecture videos">
-    <p class="caption">This count plot shows the distribution of student responses to the <code>pre_lecture_videos</code> question. A concentration of responses near 5, 6, and 7 would indicate broad support for the feature.</p>
-  </div>
-</section>
+      <article class="chart-panel">
+        <h3>Interest Grouped by Self-Reported Understanding</h3>
+        <img src="{{ '/static/imgs/understanding_vs_prelecture.png' | relative_url }}" alt="Box plot comparing self-reported understanding groups with interest in pre-lecture videos">
+        <p class="caption">This box plot groups pre-lecture-video interest by self-reported understanding. It shows whether students who feel less confident with the material still report strong demand for pre-lecture support.</p>
+      </article>
+    </div>
+  </section>
 
-<section class="card">
-  <h2>Visualization 2: Pre-Lecture Video Interest vs. Course Difficulty</h2>
-  <div class="figure-card">
-    <img src="{{ site.baseurl }}/static/imgs/difficulty_vs_prelecture.png" alt="Scatterplot comparing course difficulty and interest in pre-lecture videos">
-    <p class="caption">This scatterplot compares students' perceived course difficulty with their interest in optional pre-lecture videos. The goal is to see whether students who find the course more difficult are also more likely to support this resource.</p>
-  </div>
-</section>
-
-<section class="card">
-  <h2>Visualization 3: Pre-Lecture Video Interest by Understanding Level</h2>
-  <div class="figure-card">
-    <img src="{{ site.baseurl }}/static/imgs/understanding_vs_prelecture.png" alt="Box plot comparing understanding level and interest in pre-lecture videos">
-    <p class="caption">This box plot compares pre-lecture-video interest across different levels of self-reported understanding. Lower understanding values represent students who feel more lost, while higher values represent students who feel more confident with the material.</p>
-  </div>
-</section>
-
-<section class="card">
-  <h2>Conclusion</h2>
-  <p>The analysis provides support for implementing optional pre-lecture videos in COMP110. The strongest reason is that the feature appears to align with student need: students who experience higher difficulty or lower understanding tend to express stronger interest in having pre-lecture content available.</p>
-  <p>This does not prove that pre-lecture videos would directly improve performance, because the survey data is observational rather than experimental. However, the relationship between student difficulty, understanding, and interest in pre-lecture videos suggests that the idea is worth piloting.</p>
-  <p>The main trade-off is production cost. High-quality pre-lecture videos require instructor time to plan, record, edit, and maintain. There is also a risk that optional videos may be underused by students who would benefit from them most.</p>
-</section>
-
-<section class="card recommendation">
-  <h2>Recommendation</h2>
-  <p>COMP110 should pilot optional pre-lecture videos for selected difficult topics rather than immediately producing videos for the entire course. A limited pilot would allow instructional staff to test whether the videos actually improve student preparation and understanding before committing to a larger implementation.</p>
-</section>
+  <section class="section">
+    <h2>Conclusion</h2>
+    <p>The survey data supports piloting optional pre-lecture videos, but it does not prove that the videos would directly improve grades or understanding. The strongest evidence is that student interest is generally high and remains high for students who report higher difficulty or lower confidence.</p>
+    <p>The main trade-offs are production time, maintenance work when course content changes, and the possibility that optional videos may be underused by students who would benefit from them. A full-course rollout would require more staff time than the survey alone can justify.</p>
+    <div class="recommendation">
+      <p><strong>Recommendation:</strong> COMP110 should pilot short optional pre-lecture videos for a small set of difficult topics, then collect follow-up data on video usage, preparation, confidence, and assignment outcomes before expanding the idea.</p>
+    </div>
+  </section>
 
 </div>
